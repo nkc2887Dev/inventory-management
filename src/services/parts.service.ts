@@ -1,9 +1,9 @@
-import { Iresponse } from "../@types";
-import { IPartInput } from "../@types/part.type";
+import { Iresponse } from "../@types/index.interface";
+import { IPartInput } from "../@types/part.interface";
 import PartModel from "../models/part.model";
-import MESSAGE from "../utils/constants/msg";
-import { PART_TYPE } from "../utils/constants/part";
-import { handleAssembledPart, handleRawPart } from "./common";
+import MESSAGE from "../constants/msg.constant";
+import { PART_TYPE } from "../constants/part.constant";
+import { handleAssembledPart, handleRawPart } from "./common.service";
 
 export const createPartService = async (data: IPartInput): Promise<Iresponse> => {
   try {

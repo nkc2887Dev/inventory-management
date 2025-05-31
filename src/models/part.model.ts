@@ -1,6 +1,6 @@
 import { Schema, Types } from "mongoose";
 import { mongoose } from "../config/db.config";
-import { PART_TYPE } from "../utils/constants/part";
+import { PART_TYPE } from "../constants/part.constant";
 
 export type PartType = "RAW" | "ASSEMBLED";
 

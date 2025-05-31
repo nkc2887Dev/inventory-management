@@ -1,4 +1,4 @@
-import { SendResponseParams } from "../@types";
+import { SendResponseParams } from "../@types/index.interface";
 
 export const sendResponse = ({
   res,

@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import config from "./processEnv.config";
-import { DB_EVENTS } from "../utils/constants/common";
+import { DB_EVENTS } from "../constants/common.constant";
 
 const connectDB = async (): Promise<void> => {
   try {

@@ -1,8 +1,8 @@
-import { Iresponse, RequiredQuantityMap } from "../@types";
-import { IAddInventoryInput } from "../@types/inventory.type";
+import { Iresponse, RequiredQuantityMap } from "../@types/index.interface";
+import { IAddInventoryInput } from "../@types/inventory.interface";
 import InventoryModel from "../models/inventory.model";
 import PartModel, { IPart } from "../models/part.model";
-import MESSAGE from "../utils/constants/msg";
+import MESSAGE from "../constants/msg.constant";
 
 export const handleRawPart = async (
   data: IAddInventoryInput,
@@ -43,11 +43,8 @@ export const handleAssembledPart = async (
     await computeRequiredQuantities(id, data.quantity, requiredQuantities);
 
     const rawPartIds = Object.keys(requiredQuantities);
-    if (rawPartIds.length === 0) {
-      return {
-        flag: false,
-        msg: "No raw materials found for this assembled part",
-      };
+    if (!rawPartIds.length) {
+      return { flag: false, msg: MESSAGE.PART.NOT_FOUND };
     }
 
     const inventories = await InventoryModel.find({
@@ -132,7 +129,7 @@ async function computeRequiredQuantities(
   }
 
   const subParts = part.parts || [];
-  if (subParts.length === 0) {
+  if (!subParts.length) {
     map[partId] = (map[partId] || 0) + multiplier;
     return;
   }

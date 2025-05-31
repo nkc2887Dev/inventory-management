@@ -9,7 +9,7 @@ const MESSAGE = {
     UPDATE: "Inventory updated.",
   },
   ERROR: {
-    VALIDATION: "Validation failed"
+    VALIDATION: "Validation failed",
   },
   COMMON: {},
 };

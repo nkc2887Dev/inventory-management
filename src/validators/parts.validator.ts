@@ -1,5 +1,5 @@
 import joi from "joi";
-import { PART_TYPE } from "../constants/part";
+import { PART_TYPE } from "../constants/part.constant";
 
 export const createPart = joi.object({
   name: joi.string().required(),

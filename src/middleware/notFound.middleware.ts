@@ -1,5 +1,5 @@
 import type { Request, Response } from "express"
-import type { IApiResponse } from "../@types"
+import type { IApiResponse } from "../@types/index.interface"
 
 export const notFound = (req: Request, res: Response): void => {
   const response: IApiResponse = {
