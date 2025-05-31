@@ -1,0 +1,407 @@
+{
+	"info": {
+		"_postman_id": "b7b124cc-d266-492a-bab3-86f4b02ed298",
+		"name": "Inventory Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25000358"
+	},
+	"item": [
+		{
+			"name": "health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9876/ping",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9876",
+					"path": [
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create part",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\r\n//     \"name\": \"Bolt2\",\r\n//     \"type\": \"RAW\"\r\n// }\r\n{\r\n    \"name\": \"Gearbox\",\r\n    \"type\": \"ASSEMBLED\",\r\n    \"parts\": [\r\n        {\r\n            \"id\": \"683aa30d3b6639511ef0bc62\",\r\n            \"quantity\": 4\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9876/api/part",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9876",
+					"path": [
+						"api",
+						"part"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "bolt",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bolt\",\r\n    \"type\": \"RAW\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9876/api/part",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9876",
+							"path": [
+								"api",
+								"part"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "234"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ea-chUwYHyPJXDDy1xYGFMRKi45ea8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 31 May 2025 07:05:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Part created successfully!\",\n    \"data\": {\n        \"name\": \"Bolt\",\n        \"type\": \"RAW\",\n        \"quantity\": 0,\n        \"_id\": \"683aaa2d376479bd98059356\",\n        \"parts\": [],\n        \"createdAt\": \"2025-05-31T07:05:17.590Z\",\n        \"updatedAt\": \"2025-05-31T07:05:17.590Z\",\n        \"__v\": 0\n    }\n}"
+				},
+				{
+					"name": "shaft",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Shaft\",\r\n    \"type\": \"RAW\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9876/api/part",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9876",
+							"path": [
+								"api",
+								"part"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "235"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"eb-nGqXN02iAyiCK+dx32sPx7ltM+0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 31 May 2025 07:05:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Part created successfully!\",\n    \"data\": {\n        \"name\": \"Shaft\",\n        \"type\": \"RAW\",\n        \"quantity\": 0,\n        \"_id\": \"683aaa45376479bd98059359\",\n        \"parts\": [],\n        \"createdAt\": \"2025-05-31T07:05:41.540Z\",\n        \"updatedAt\": \"2025-05-31T07:05:41.540Z\",\n        \"__v\": 0\n    }\n}"
+				},
+				{
+					"name": "Gearbox",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// {\r\n//     \"name\": \"Bolt2\",\r\n//     \"type\": \"RAW\"\r\n// }\r\n{\r\n    \"name\": \"Gearbox\",\r\n    \"type\": \"ASSEMBLED\",\r\n    \"parts\": [\r\n        {\r\n            \"id\": \"683aa30d3b6639511ef0bc62\",\r\n            \"quantity\": 4\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9876/api/part",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9876",
+							"path": [
+								"api",
+								"part"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "402"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"192-6coIPzQufPzZgo+8o5wNNsUKaYA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 31 May 2025 07:11:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Part created successfully!\",\n    \"data\": {\n        \"name\": \"Gearbox\",\n        \"type\": \"ASSEMBLED\",\n        \"quantity\": 0,\n        \"parts\": [\n            {\n                \"id\": \"683aaa2d376479bd98059356\",\n                \"quantity\": 4,\n                \"_id\": \"683aab8d5aeeb65ad02a79a2\"\n            },\n            {\n                \"id\": \"683aaa45376479bd98059359\",\n                \"quantity\": 2,\n                \"_id\": \"683aab8d5aeeb65ad02a79a3\"\n            }\n        ],\n        \"_id\": \"683aab8d5aeeb65ad02a79a1\",\n        \"createdAt\": \"2025-05-31T07:11:09.311Z\",\n        \"updatedAt\": \"2025-05-31T07:11:09.311Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "set inventory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"quantity\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9876/api/part/683ada6bd01cf6c1d3b4bf1b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9876",
+					"path": [
+						"api",
+						"part",
+						"683ada6bd01cf6c1d3b4bf1b"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9876/api/part/683aaa45376479bd98059359",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9876",
+							"path": [
+								"api",
+								"part",
+								"683aaa45376479bd98059359"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "222"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"de-DP5CJ/ucDkwSDmWsd1Gg9lPYWxY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 31 May 2025 07:08:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Inventory created.\",\n    \"data\": {\n        \"part\": \"683aaa45376479bd98059359\",\n        \"quantity\": 5,\n        \"_id\": \"683aaad75aeeb65ad02a7998\",\n        \"createdAt\": \"2025-05-31T07:08:07.968Z\",\n        \"updatedAt\": \"2025-05-31T07:08:07.968Z\",\n        \"__v\": 0\n    }\n}"
+				},
+				{
+					"name": "update",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9876/api/part/683aaa45376479bd98059359",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9876",
+							"path": [
+								"api",
+								"part",
+								"683aaa45376479bd98059359"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "223"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"df-AiZkjHxQ0oMGXuDhEnvQGQZHvMw\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 31 May 2025 07:08:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Inventory updated.\",\n    \"data\": {\n        \"_id\": \"683aaad75aeeb65ad02a7998\",\n        \"part\": \"683aaa45376479bd98059359\",\n        \"quantity\": 15,\n        \"createdAt\": \"2025-05-31T07:08:07.968Z\",\n        \"updatedAt\": \"2025-05-31T07:08:38.755Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		}
+	]
+}
