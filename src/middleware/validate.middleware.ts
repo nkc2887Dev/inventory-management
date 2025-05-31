@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import Joi from "joi";
 import { ERROR_CODE } from "../constants/common.constant";
-import MESSAGE from "../constants/msg.constant";
+import MESSAGE from "../constants/message.constant";
 
 const validate = (validator: Joi.ObjectSchema) => {
   return async (req: Request, res: Response, next: NextFunction) => {

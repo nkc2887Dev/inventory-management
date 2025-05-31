@@ -2,7 +2,7 @@ import { Iresponse, RequiredQuantityMap } from "../@types/index.interface";
 import { IAddInventoryInput } from "../@types/inventory.interface";
 import InventoryModel from "../models/inventory.model";
 import PartModel, { IPart } from "../models/part.model";
-import MESSAGE from "../constants/msg.constant";
+import MESSAGE from "../constants/message.constant";
 
 export const handleRawPart = async (
   data: IAddInventoryInput,

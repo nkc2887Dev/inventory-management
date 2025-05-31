@@ -1,7 +1,7 @@
 import { Iresponse } from "../@types/index.interface";
 import { IPartInput } from "../@types/part.interface";
 import PartModel from "../models/part.model";
-import MESSAGE from "../constants/msg.constant";
+import MESSAGE from "../constants/message.constant";
 import { PART_TYPE } from "../constants/part.constant";
 import { handleAssembledPart, handleRawPart } from "./common.service";
 
