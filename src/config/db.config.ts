@@ -13,7 +13,7 @@ const connectDB = async (): Promise<void> => {
       console.info("📡 MongoDB connection is open.");
     });
 
-    db.on(DB_EVENTS.OPEN, (error) => {
+    db.on(DB_EVENTS.ERROR, (error: any) => {
       console.error("❌ MongoDB error:", error);
     });
 
