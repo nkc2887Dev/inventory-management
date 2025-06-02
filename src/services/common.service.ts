@@ -121,8 +121,6 @@ async function computeRequiredQuantities(
   map: RequiredQuantityMap,
   depth: number = 0
 ): Promise<void> {
-  const indent = "  ".repeat(depth);
-
   const part = await PartModel.findById(partId).lean();
   if (!part) {
     return;
